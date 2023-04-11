@@ -3252,17 +3252,17 @@ static const struct panel_desc bestar_bsd101wum_n80 = {
 
 // Panel BESTAR BSD101WUM-N80 with eDP to LVDS adaptor
 static const struct drm_display_mode bestar_bsd101wum_n80B_mode = {
-        .clock = 149000,
+        .clock = 148200,
 
         .hdisplay    = 1920,
-        .hsync_start = 1920 + 80,
-        .hsync_end   = 1920 + 80 + 40,
-        .htotal      = 1920 + 80 + 40 + 40,
+        .hsync_start = 1920 + 52,           // front porch = 26 x 2
+        .hsync_end   = 1920 + 52 + 24,      // sync = 12 x 2
+        .htotal      = 1920 + 52 + 24 + 32, // back porch = 16 x 2
 
         .vdisplay    = 1200,
-        .vsync_start = 1200 + 20,
-        .vsync_end   = 1200 + 20 + 10,
-        .vtotal      = 1200 + 20 + 10 + 10,
+        .vsync_start = 1200 + 16,
+        .vsync_end   = 1200 + 16 + 6,
+        .vtotal      = 1200 + 16 + 6 + 48,
 
        	.vrefresh = 60, // Not actually needed but it apparently makes the debug messages easier to read.
 
