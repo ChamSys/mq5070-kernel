@@ -9,6 +9,21 @@
 
 / {
 	model = "ChamSys-RK3288-MQ5070HD-rack";
+
+	keys: gpio-keys {
+		compatible = "gpio-keys";
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		button@0 {
+			gpio-key,wakeup = <1>;
+			gpios = <&gpio0 RK_PA5 GPIO_ACTIVE_LOW>;
+			label = "GPIO Power";
+			linux,code = <116>;
+			pinctrl-names = "default";
+			pinctrl-0 = <&pwr_key>;
+		};
+	};
 };
 
 // There's no SD card
