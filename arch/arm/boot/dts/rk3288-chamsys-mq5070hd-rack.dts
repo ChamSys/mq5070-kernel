@@ -26,6 +26,15 @@
 	};
 };
 
+&pinctrl {
+    keys {
+	    pwr_key: pwr-key {
+	    	rockchip,pins = <0 5 RK_FUNC_GPIO &pcfg_pull_up>;
+	    };
+    };
+};
+
+
 // There's no SD card
 // We still need this node as code assumes internal flash is /dev/mmcblk1
 //&sdmmc { status = "disabled"; };
