@@ -75,6 +75,7 @@
 &uart4 { status = "okay"; };
 
 &act8846 {
+	pinctrl-0 = <&pmic_vsel>; // <&pwr_hold>;
 	// Add back in
 	// Needed in rack but not consoles
 	// to ensure power button works after shutdown
