@@ -3217,14 +3217,23 @@ static const struct drm_display_mode bestar_bsd101wum_n80_mode = {
         .clock = 155120,                     // 77.56 x 2 x 1000
         
         .hdisplay    = 1920,                 // 960 x 2
-        .hsync_start = 1920 + 128,           // front porch = 64 x 2
-        .hsync_end   = 1920 + 128 + 20,      // sync = 10 x 2
-        .htotal      = 1920 + 128 + 20 + 12, // back porch = 6 x 2
+        .hsync_start = 1920 + 52,            // front porch = 26 x 2
+        .hsync_end   = 1920 + 52 + 12,       // sync = 12 x 2
+        .htotal      = 1920 + 52 + 12 + 32,  // back porch = 16 x 2
 
         .vdisplay    = 1200,
-        .vsync_start = 1200 + 19,
-        .vsync_end   = 1200 + 19 + 4,
-        .vtotal      = 1200 + 19 + 4 + 20,
+        .vsync_start = 1200 + 8,
+        .vsync_end   = 1200 + 8 + 3,
+        .vtotal      = 1200 + 8 + 3 + 24,
+        // .hdisplay    = 1920,                 // 960 x 2
+        // .hsync_start = 1920 + 128,           // front porch = 64 x 2
+        // .hsync_end   = 1920 + 128 + 20,      // sync = 10 x 2
+        // .htotal      = 1920 + 128 + 20 + 12, // back porch = 6 x 2
+
+        // .vdisplay    = 1200,
+        // .vsync_start = 1200 + 19,
+        // .vsync_end   = 1200 + 19 + 4,
+        // .vtotal      = 1200 + 19 + 4 + 20,
 
        	.vrefresh = 60, // Not actually needed but it apparently makes the debug messages easier to read.
 
