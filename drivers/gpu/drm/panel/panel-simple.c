@@ -3214,21 +3214,21 @@ static const struct panel_desc panasonic_vvx10t025 = {
 
 // Panel BESTAR BSD101WUM-N80 with eDP to LVDS adaptor
 static const struct drm_display_mode bestar_bsd101wum_n80_mode = {
-        .clock = 155120,                     // 77.56 x 2 x 1000
+	.clock = 155120,                     // 77.56 x 2 x 1000
         
-        .hdisplay    = 1920,                 // 960 x 2
-        .hsync_start = 1920 + 52,            // front porch = 26 x 2
-        .hsync_end   = 1920 + 52 + 12,       // sync = 12 x 2
-        .htotal      = 1920 + 52 + 12 + 32,  // back porch = 16 x 2
+	.hdisplay    = 1920,                 // 960 x 2
+	.hsync_start = 1920 + 52,            // front porch = 26 x 2
+	.hsync_end   = 1920 + 52 + 12,       // sync = 12 x 2
+	.htotal      = 1920 + 52 + 12 + 32,  // back porch = 16 x 2
 
-        .vdisplay    = 1200,
-        .vsync_start = 1200 + 8,
-        .vsync_end   = 1200 + 8 + 3,
-        .vtotal      = 1200 + 8 + 3 + 24,
+	.vdisplay    = 1200,
+	.vsync_start = 1200 + 8,
+	.vsync_end   = 1200 + 8 + 3,
+	.vtotal      = 1200 + 8 + 3 + 24,
 
-       	.vrefresh = 60, // Not actually needed but it apparently makes the debug messages easier to read.
+	.vrefresh = 60, // Not actually needed but it apparently makes the debug messages easier to read.
 
-        .flags = DRM_MODE_FLAG_NVSYNC | DRM_MODE_FLAG_NHSYNC,
+	.flags = DRM_MODE_FLAG_NVSYNC | DRM_MODE_FLAG_NHSYNC,
 };
 
 static const struct panel_desc bestar_bsd101wum_n80 = {
@@ -3236,37 +3236,37 @@ static const struct panel_desc bestar_bsd101wum_n80 = {
 	.num_modes = 1,
 	.size = {
 		.width = 220,
-	 	.height = 138,
+		.height = 138,
 	},
 
-        // Blindly copied from the DTS
-        .delay = {
-          .prepare = 120,
-        },
+	// Blindly copied from the DTS
+	.delay = {
+		.prepare = 120,
+	},
 
-        // Not sure if any of the following is required
-        .bus_format = MEDIA_BUS_FMT_RGB666_1X18,
-        .bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
-        .connector_type = DRM_MODE_CONNECTOR_eDP,
+	// Not sure if any of the following is required
+	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
+	.connector_type = DRM_MODE_CONNECTOR_eDP,
 };
 
 // Panel BESTAR BSD101WUM-N80 with eDP to LVDS adaptor
 static const struct drm_display_mode bestar_bsd101wum_n80B_mode = {
-        .clock = 149000,
+	.clock = 149000,
 
-        .hdisplay    = 1920,
-        .hsync_start = 1920 + 80,
-        .hsync_end   = 1920 + 80 + 40,
-        .htotal      = 1920 + 80 + 40 + 40,
+	.hdisplay    = 1920,
+	.hsync_start = 1920 + 80,
+	.hsync_end   = 1920 + 80 + 40,
+	.htotal      = 1920 + 80 + 40 + 40,
 
-        .vdisplay    = 1200,
-        .vsync_start = 1200 + 20,
-        .vsync_end   = 1200 + 20 + 10,
-        .vtotal      = 1200 + 20 + 10 + 10,
+	.vdisplay    = 1200,
+	.vsync_start = 1200 + 20,
+	.vsync_end   = 1200 + 20 + 10,
+	.vtotal      = 1200 + 20 + 10 + 10,
 
-       	.vrefresh = 60, // Not actually needed but it apparently makes the debug messages easier to read.
+	.vrefresh = 60, // Not actually needed but it apparently makes the debug messages easier to read.
 
-        .flags = DRM_MODE_FLAG_NVSYNC | DRM_MODE_FLAG_NHSYNC,
+	.flags = DRM_MODE_FLAG_NVSYNC | DRM_MODE_FLAG_NHSYNC,
 };
 
 static const struct panel_desc bestar_bsd101wum_n80B = {
@@ -3274,19 +3274,58 @@ static const struct panel_desc bestar_bsd101wum_n80B = {
 	.num_modes = 1,
 	.size = {
 		.width = 220,
+		.height = 138,
+	},
+
+	// Blindly copied from the DTS
+	.delay = {
+		.prepare = 120,
+	},
+
+	// Not sure if any of the following is required
+	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
+	.connector_type = DRM_MODE_CONNECTOR_eDP,
+};
+
+
+static const struct drm_display_mode boe_gv101wum_n40_1mt0_mode = {
+	.clock = 154800,
+
+	.hdisplay    = 1920,
+	.hsync_start = 1920 + 100,
+	.hsync_end   = 1920 + 100 + 32,
+	.htotal      = 1920 + 100 + 32 + 60,
+
+	.vdisplay    = 1200,
+	.vsync_start = 1200 + 30,
+	.vsync_end   = 1200 + 30 + 3,
+	.vtotal      = 1200 + 30 + 3 + 10,
+
+	.vrefresh = 60,
+
+	.flags = DRM_MODE_FLAG_NVSYNC | DRM_MODE_FLAG_NHSYNC,
+};
+
+static const struct panel_desc boe_gv101wum_n40_1mt0 = {
+	.modes = &boe_gv101wum_n40_1mt0_mode,
+	.num_modes = 1,
+	.size = {
+		.width = 220,
 	 	.height = 138,
 	},
 
-        // Blindly copied from the DTS
-        .delay = {
-          .prepare = 120,
-        },
+	// Blindly copied from the DTS
+	.delay = {
+		.prepare = 120,
+	},
 
-        // Not sure if any of the following is required
-        .bus_format = MEDIA_BUS_FMT_RGB666_1X18,
-        .bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
-        .connector_type = DRM_MODE_CONNECTOR_eDP,
+	// Not sure if any of the following is required
+	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
+	.connector_type = DRM_MODE_CONNECTOR_eDP,
 };
+
 
 static const struct of_device_id platform_of_match[] = {
 	{
@@ -3634,6 +3673,9 @@ static const struct of_device_id platform_of_match[] = {
 	}, {
 		.compatible = "bestar,bsd101wum-n80B",
 		.data = &bestar_bsd101wum_n80B,
+	}, {
+		.compatible = "boe,gv101",
+		.data = &boe_gv101wum_n40_1mt0,
 	}, {
 		/* sentinel */
 	}
