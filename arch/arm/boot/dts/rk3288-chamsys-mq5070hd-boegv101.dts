@@ -17,7 +17,7 @@
 };
 
 &panel {
-	compatible = "boe,gv101";
+	compatible = "boe,gv101", "simple-panel";
 };
 
 &panel_touch {
