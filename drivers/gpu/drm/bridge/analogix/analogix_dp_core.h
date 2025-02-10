@@ -16,6 +16,7 @@
 #define MAX_CR_LOOP 5
 #define MAX_EQ_LOOP 5
 #define MAX_PLL_LOCK_LOOP 5
+#define MAX_CR_REQUEST 32
 
 /* Training takes 22ms if AUX channel comm fails. Use this as retry interval */
 #define DP_TIMEOUT_TRAINING_US			22000
@@ -146,6 +147,7 @@ struct video_info {
 struct link_train {
 	int eq_loop;
 	int cr_loop[4];
+	int cr_req_cnt[4];
 
 	u8 link_rate;
 	u8 lane_count;
